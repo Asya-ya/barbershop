@@ -1,0 +1,198 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'PT Sans Narrow', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+
+    background-color: #000000;
+    background-image: url('../img/bg.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button {
+    font: inherit;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #000000;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover,
+.button.focus,
+.button:active {
+    background-color: #663d15;
+}
+
+.main-nav {
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.main-nav-list,
+.user-nav-list {
+    list-style: none;
+}
+
+.main-nav-item a,
+.user-nav-item a {
+    color: #ffffff;
+}
+
+.main-nav-item a:hover,
+.main-nav-item a:focus,
+.user-nav-item a:hover,
+.user-nav-item a:focus {
+    background-color: #242424;
+}
+
+.features-list {
+    list-style: none;
+}
+
+.feature-item {
+    text-align: center;
+}
+
+.feature-item h3 {
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.main-block {
+    color: #000000;
+    background-color: #f8f5f2;
+    background-image: url(../img/light-pattern.jpg);
+    background-position: 0 0;
+    background-repeat: repeat;
+}
+
+.main-block h2 {
+    font-size: 30px;
+    line-height: 42px;
+}
+
+.news-list {
+    list-style: none;
+}
+
+.news-item time {
+    text-transform: none;
+}
+
+.gallery-content {
+    background-color: #e5e5e5;
+    border: 7px solid #ffffff;
+}
+
+.appointment-item input {
+    font: inherit;
+    background-color: #f9f6f3;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000101;
+}
+
+.appointment-item input:focus {
+    outline: none;
+    border-color: #663d15;
+}
+
+.main-footer {
+    color: #ffffff;
+    background-color: #222222;
+    background-image: url(../img/dark-pattern.jpg);
+    background-position: 0 0;
+    background-repeat: repeat;
+}
+
+.main-footer a {
+    color: #ffffff;
+}
+
+.footer-contacts a {
+    text-decoration: underline;
+}
+
+.footer-contacts a:hover,
+.footer-contacts a:focus {
+    text-decoration: none;
+}
+
+.footer-social,
+.footer-copyright {
+    text-align: center;
+}
+
+.footer-social .button:hover,
+.footer-social .button.focus,
+.footer-copyright .button:hover,
+.footer-copyright .button.focus {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.footer-social ul {
+    list-style: none;
+}
+
+.modal {
+    color: #000000;
+    background-color: #f8f5f2;
+    background-image: url(../img/light-pattern.jpg);
+}
+
+.modal h2 {
+    font-size: 30px;
+    line-height: normal;
+}
+
+.login-item input[type="text"],
+.login-item input[type="password"] {
+    font: inherit;
+    color: #000000;
+    background-color: #f9f6f3;
+    text-transform: uppercase;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #000000;
+}
+
+.login-item input[type="text"]:focus,
+.login-item input[type="password"]:focus {
+    outline: none;
+    border-color: #663d15;   
+}
+
+.login-item input::placeholder {
+    color: #000000;
+}
+
+.login-checkbox:hover,
+.login-checkbox:focus ~ label {
+    color: #663d15;
+}
+
+.restore {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.restore:hover,
+.restore:focus {
+    text-decoration: none;
+}
