@@ -19,6 +19,17 @@ a {
     text-decoration: none;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
 .button {
     font: inherit;
     text-align: center;
@@ -36,11 +47,35 @@ a {
     background-color: #663d15;
 }
 
+.main-header {
+    margin-bottom: 75px;
+}
+
 .main-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     font-size: 16px;
     line-height: 20px;
     color: #ffffff;
+    /* background-color: #000000;  */
+}
+
+.main-header-logo {
+    order: 2;
+}
+
+.main-nav-wrapper {
+    width: 100%;
+    margin-bottom: 60px;
+
     background-color: #000000;
+}
+
+.main-nav-wrapper .container {
+    display: flex;
+    justify-content: space-between;
 }
 
 .main-nav-list,
@@ -60,12 +95,24 @@ a {
     background-color: #242424;
 }
 
+.main-nav-list {
+    width: 540px;
+}
+
+.user-nav-list {
+    width: 107px;
+}
+
 .features-list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 82px;
     list-style: none;
 }
 
 .feature-item {
     text-align: center;
+    width: 300px;
 }
 
 .feature-item h3 {
@@ -74,6 +121,11 @@ a {
 }
 
 .main-block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 36px;
+    padding: 52px 82px;
+    
     color: #000000;
     background-color: #f8f5f2;
     background-image: url(../img/light-pattern.jpg);
@@ -84,6 +136,14 @@ a {
 .main-block h2 {
     font-size: 30px;
     line-height: 42px;
+}
+
+.news, .contacts {
+    width: 380px;
+}
+
+.gallery, .appointment {
+    width: 300px;
 }
 
 .news-list {
@@ -118,10 +178,22 @@ a {
     background-image: url(../img/dark-pattern.jpg);
     background-position: 0 0;
     background-repeat: repeat;
+    
+    margin-top: 65px;
+    padding: 63px 0;    
+}
+
+.main-footer .container {
+    display: flex;
 }
 
 .main-footer a {
     color: #ffffff;
+}
+
+.footer-contacts {
+    width: 320px;
+    margin-right: 80px;
 }
 
 .footer-contacts a {
@@ -136,6 +208,7 @@ a {
 .footer-social,
 .footer-copyright {
     text-align: center;
+    width: 140px;
 }
 
 .footer-social .button:hover,
@@ -148,6 +221,10 @@ a {
 
 .footer-social ul {
     list-style: none;
+}
+
+.footer-copyright {
+    margin-left: auto;
 }
 
 .modal {

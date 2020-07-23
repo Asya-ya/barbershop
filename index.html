@@ -10,18 +10,22 @@
     <body>
         <header class="main-header">
             <nav class="main-nav">
-                <a><img src="img/index-logo.svg" width="371" height="155" alt="Логотип барбершопа 'Бородинский'"></a>    
-                <ul class="main-nav-list">
-                    <li class="main-nav-item"><a href="#">Информация</a></li>
-                    <li class="main-nav-item"><a href="#">Новости</a></li>
-                    <li class="main-nav-item"><a href="#">Прайс-лист</a></li>
-                    <li class="main-nav-item"><a href="#">Магазин</a></li>
-                    <li class="main-nav-item"><a href="#">Контакты</a></li>
-                </ul>      
-                
-                <ul class="user-nav-list">
-                    <li class="user-nav-item"><a href="#">Вход</a></li>
-                </ul>
+                <a class="main-header-logo"><img src="img/index-logo.svg" width="371" height="155" alt="Логотип барбершопа 'Бородинский'"></a>    
+                <div class="main-nav-wrapper">
+                    <div class="container">
+                        <ul class="main-nav-list">
+                            <li class="main-nav-item"><a href="#">Информация</a></li>
+                            <li class="main-nav-item"><a href="#">Новости</a></li>
+                            <li class="main-nav-item"><a href="#">Прайс-лист</a></li>
+                            <li class="main-nav-item"><a href="#">Магазин</a></li>
+                            <li class="main-nav-item"><a href="#">Контакты</a></li>
+                        </ul>      
+                        
+                        <ul class="user-nav-list">
+                            <li class="user-nav-item"><a href="#">Вход</a></li>
+                        </ul>
+                    </div>       
+                </div>        
             </nav>
         </header>
         <body>
@@ -140,28 +144,30 @@
             </main>
 
             <footer class="main-footer">
-                <div class="footer-contacts">
-                    <p>
-                        Барбершоп «Бородинский»<br>
-                        АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8<br>
-                        <a href="#">Как нас найти?</a><br>
-                        Телефон: +7 (812) 666-02-66
-                    </p>                                        
-                </div>
+                <div class="container">
+                    <div class="footer-contacts">
+                        <p>
+                            Барбершоп «Бородинский»<br>
+                            АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8<br>
+                            <a href="#">Как нас найти?</a><br>
+                            Телефон: +7 (812) 666-02-66
+                        </p>                                        
+                    </div>
 
-                <div class="footer-social">
-                    <p>Давайте дружить!</p>
-                    <ul>
-                        <li><a href="#">Вконтакте</a></li>
-                        <li><a href="#">Фейсбук</a></li>
-                        <li><a href="#">Инстаграм</a></li>
-                    </ul>
-                </div>
+                    <div class="footer-social">
+                        <p>Давайте дружить!</p>
+                        <ul>
+                            <li><a href="#">Вконтакте</a></li>
+                            <li><a href="#">Фейсбук</a></li>
+                            <li><a href="#">Инстаграм</a></li>
+                        </ul>
+                    </div>
 
-                <div class="footer-copyright">
-                    <p>Разработано:</p>
-                    <a href="#" class="button">HTML Academy</a>
-                </div>
+                    <div class="footer-copyright">
+                        <p>Разработано:</p>
+                        <a href="#" class="button">HTML Academy</a>
+                    </div>
+                </div>               
             </footer>
 
             <section class="modal modal-login">
