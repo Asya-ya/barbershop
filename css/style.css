@@ -20,8 +20,37 @@ a {
 }
 
 ul {
+    list-style: none;
     margin: 0;
     padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+fieldset {
+    border-width: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
 }
 
 .container {
@@ -31,14 +60,16 @@ ul {
 }
 
 .button {
+    display: inline-block;
     font: inherit;
     text-align: center;
-    vertical-align: middle;
     text-transform: uppercase;
     color: #ffffff;
     background-color: #000000;
     border: none;
     cursor: pointer;
+    padding: 15px 0px;
+    transition: background-color 0.5s;
 }
 
 .button:hover,
@@ -59,7 +90,6 @@ ul {
     font-size: 16px;
     line-height: 20px;
     color: #ffffff;
-    /* background-color: #000000;  */
 }
 
 .main-header-logo {
@@ -81,11 +111,52 @@ ul {
 .main-nav-list,
 .user-nav-list {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-nav-list {  
+    width: 540px;
+}
+
+.user-nav-list {
+    width: 107px;
 }
 
 .main-nav-item a,
 .user-nav-item a {
+    display: block;
     color: #ffffff;
+    padding: 28px 19px;
+    transition: background-color 0.5s;
+}
+
+.user-nav-item a {
+    position: relative;
+    padding-left: 53px;
+} 
+
+.user-nav-item a::before {
+    content: "";
+    opacity: 0.3;
+    transition: opacity 0.5s;
+
+    position: absolute;
+    top: 30px;
+    left: 24px;
+
+    width: 16px;
+    height: 16px;
+
+    background-image: url("../img/login.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.user-nav-item a:hover::before,
+.user-nav-item a:active::before,
+.user-nav-item a:focus::before {
+    opacity: 1;
 }
 
 .main-nav-item a:hover,
@@ -93,14 +164,6 @@ ul {
 .user-nav-item a:hover,
 .user-nav-item a:focus {
     background-color: #242424;
-}
-
-.main-nav-list {
-    width: 540px;
-}
-
-.user-nav-list {
-    width: 107px;
 }
 
 .features-list {
@@ -113,11 +176,36 @@ ul {
 .feature-item {
     text-align: center;
     width: 300px;
+    padding: 0 24px;
+    box-sizing: border-box;
 }
 
 .feature-item h3 {
+    position: relative;
+    margin: 0;
+    margin-bottom: 67px;
+    padding: 0;
     font-size: 30px;
     line-height: 42px;
+}
+
+.feature-item h3::after {
+    content: "";
+    position: absolute;
+    bottom: -34px;
+    left: 50%;
+    margin-left: -10px;
+    transform: rotate(45deg);
+
+    width: 20px;
+    height: 20px;
+
+    background-color: #ffffff;
+}
+
+.feature-item p {
+    margin: 0;
+    padding: 0;
 }
 
 .main-block {
@@ -128,12 +216,17 @@ ul {
     
     color: #000000;
     background-color: #f8f5f2;
-    background-image: url(../img/light-pattern.jpg);
-    background-position: 0 0;
-    background-repeat: repeat;
+    background-image: 
+        url(../img/index-shadow.png),
+        url(../img/light-pattern.jpg);
+    background-position: center, 0 0;
+    background-repeat: no-repeat, repeat;
 }
 
 .main-block h2 {
+    margin: 0;
+    margin-bottom: 28px;
+    padding: 0;
     font-size: 30px;
     line-height: 42px;
 }
@@ -142,34 +235,108 @@ ul {
     width: 380px;
 }
 
+.news .button {
+    width: 140px;
+}
+
 .gallery, .appointment {
     width: 300px;
 }
 
-.news-list {
-    list-style: none;
+.news-item {
+    margin-bottom: 30px;
+}
+
+.news-item p {
+    margin: 0;
+    padding: 0;
 }
 
 .news-item time {
     text-transform: none;
 }
 
+.gallery-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery .button {
+    width: 140px;
+}
+
 .gallery-content {
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0;
+    height: 164px;
     background-color: #e5e5e5;
     border: 7px solid #ffffff;
 }
 
+.contacts p {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+.contacts-wrap {
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contacts .button {
+    width: 140px;
+}
+
+.appointment p {
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.appointment p:not(.appointment-item) {
+    margin-bottom: 22px;
+}
+
+.appointment-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.appointment-item {
+    width: 140px;
+}
+
+.appointment-item label {
+    display: block;
+    padding-bottom: 10px;
+    padding-left: 17px;
+}
+
 .appointment-item input {
     font: inherit;
+    width: 140px;
     background-color: #f9f6f3;
     border-width: 2px;
     border-style: solid;
     border-color: #000101;
+    padding: 7px 15px;   
+    box-sizing: border-box; 
 }
 
 .appointment-item input:focus {
     outline: none;
     border-color: #663d15;
+}
+
+.appointment .button {
+    margin-top: 5px;
+    width: 100%;
 }
 
 .main-footer {
@@ -180,7 +347,13 @@ ul {
     background-repeat: repeat;
     
     margin-top: 65px;
-    padding: 63px 0;    
+    padding-top: 63px;    
+    padding-bottom: 42px;
+}
+
+.main-footer p {
+    margin: 0;
+    padding: 0;
 }
 
 .main-footer .container {
@@ -219,12 +392,52 @@ ul {
     background-color: #ffffff;
 }
 
+.footer-social p {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
 .footer-social ul {
-    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    background-color: #000000;
+    transition: background-color 0.5s;
+}
+
+.footer-social a:hover,
+.footer-social a:active,
+.footer-social a:focus {
+    background-color: #ffffff;
+}
+
+.footer-social a:hover path,
+.footer-social a:active path,
+.footer-social a:focus path {
+    fill: #000000;
 }
 
 .footer-copyright {
     margin-left: auto;
+}
+
+.footer-copyright p {
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+.footer-copyright .button {
+    width: 140px;
 }
 
 .modal {
